@@ -1,4 +1,4 @@
-# ---------- Data ----------
+# Data
 name = [
     "Rohan Murthy", "Rohini Patil",
     "Kamlesh Jadhav", "Karishma Doke",
@@ -15,7 +15,7 @@ acc_bal = [8000, 7680, 0, 0, 75000, 6900]
 
 record = []
 
-# ---------- Display ----------
+# Display
 def display_accounts():
     for i in range(len(acc_no)):
         print(f"""
@@ -29,7 +29,7 @@ Balance        : {acc_bal[i]}
     print("Max Balance:", max(acc_bal))
     print("Min Balance:", min(acc_bal))
 
-# ---------- Transaction ----------
+# Transaction Logic
 def transact():
     number = int(input("Enter Account Number: "))
 
@@ -58,7 +58,7 @@ Select option:
     else:
         print("Invalid option")
 
-# ---------- Add Account ----------
+# Add Account
 def add_account():
     number = acc_no[-1] + 1
     acc_name = input("Enter Name: ")
@@ -70,7 +70,7 @@ def add_account():
     print("Account added successfully")
     display_accounts()
 
-# ---------- Protect Data ----------
+# protect the data
 def protect_data():
     record.clear()
     for i in range(len(name)):
@@ -79,7 +79,7 @@ def protect_data():
     print("Protected Data:")
     print(tuple(record))
 
-# ---------- Menu ----------
+# Menu Logic
 def bank():
     while True:
         select = int(input("""
@@ -107,3 +107,4 @@ Select option: """))
 
 # ---------- Run ----------
 bank()
+
